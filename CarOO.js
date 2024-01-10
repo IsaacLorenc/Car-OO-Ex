@@ -45,3 +45,34 @@ class Garage extends Vehicle {
         return 'Vehicle added!';
     }
 }
+
+//suggestions and improvements
+//1. There's a typo in the toString() method where this.maodel should be corrected to this.model.
+//2.There's a missing super() call in the constructor, which is required when extending another class.
+//3 Initialize the vehicle propertyin the constructor.
+//4. There's a typo in this.vehicle.lenght, it should be corrected to this.vehicle.length.
+//5. The capacity check in add() uses this.vehicle.length which should be corrected to this.vehicle.length.
+//
+//
+//The 'Garage' class should have its own scope without inheriting from 'Vehicle'. See the code below
+
+/* class Garage {
+    constructor(capacity) {
+        this.vehicles = [];
+        this.capacity = capacity;
+    }
+
+    add(newVehicle) {
+        if (!(newVehicle instanceof Vehicle)) {
+            return 'Only vehicles are allowed in here!';
+        }
+
+        if (this.vehicles.length >= this.capacity) {
+            return "Sorry, we're full.";
+        }
+
+        this.vehicles.push(newVehicle);
+        return 'Vehicle added!';
+    }
+}
+ */
