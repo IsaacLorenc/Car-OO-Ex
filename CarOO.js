@@ -8,7 +8,7 @@ class Vehicle {
         return "Beep";
     }
     toString() {
-        return `This is a ${this.make} ${this.maodel} from ${this.year}.`;
+        return `This is a ${this.make} ${this.model} from ${this.year}.`;
     }
 }
 
@@ -29,7 +29,7 @@ class Motorcycle extends Vehicle {
     }
 }
 
-class Garage extends Vehicle {
+class Garage {
     constructor(capacity) {
         this.vehicle = [];
         this.capacity = capacity;
@@ -38,7 +38,7 @@ class Garage extends Vehicle {
         if (!(newVehicle instanceof Vehicle)) {
             return 'Only vehicles are allowed in here!';
         }
-        if (this.vehicle.lenght >= this.capacity) {
+        if (this.vehicle.length >= this.capacity) {
             return "Sorry, we're full.";
         }
         this.vehicle.push(newVehicle);
